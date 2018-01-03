@@ -5,4 +5,4 @@ TreeView for [bootstrapTable](https://github.com/wenzhixin/bootstrap-table)
 
 ## DEMO
 
-[https://github.com/lslvxy/bootstrapTable-treeView/index.html](https://github.com/lslvxy/bootstrapTable-treeView/index.html)
+[http://lise.io/bootstrapTable-treeView/](http://lise.io/bootstrapTable-treeView/)
