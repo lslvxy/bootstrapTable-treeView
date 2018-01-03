@@ -27,6 +27,8 @@ childNode's `parentId` property value isparnetNode's `id` value
 ## USE
 
 ```
+<script src="./src/bootstraptable-treeview.js"></script>
+  
 $('#tree_table').bootstrapTable({
     class: 'table table-hover table-bordered',
     data: data,
