@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TreeView-Lise</title>
+    <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="./assets/bootstrap-table.css">
+    <script src="./assets/jquery.js"></script>
+    <script src="./assets/bootstrap/js/bootstrap.js"></script>
+    <script src="./assets/bootstrap-table.js"></script>
+    <script src="./src/bootstraptable-treeview.js"></script>
+
+</head>
+
+<body>
+    <div style="margin:20px">
+        <input type="button" id="expandAllTree" value="展开所有"  class="btn btn-defaul"/>
+        <input type="button" id="collapseAllTree" value="折叠所有" class="btn btn-defaul"/>
+        <table id="tree_table"></table>
+
+    </div>
+    <script>
+        $(function () {
+            var data = [
+                {
+                    id: '1',
+                    name: "aa",
+                    desc: "这是一个描述",
+                    parentId:null,
+                },{
+                    id: '11',
+                    name: "aa_sub1",
+                    desc: "这是一个描述_sub1",
+                    parentId:'1',
+                },{
+                    id: '111',
+                    name: "aa_sub1_sub2",
+                    desc: "这是一个描述_sub1_sub2" ,
+                    parentId:'11',
+                },
+                {
+                    id: '2',
+                    name: "bb",
+                    desc: "这是一个描述",
+                    parentId:null,
+                },
+                {
+                    id: '22',
+                    name: "bb_sub1",
+                    desc: "这是一个描述_sub1",
+                    parentId:'2',
+                },{
+                    id: '23',
+                    name: "bb_sub2",
+                    desc: "这是一个描述_sub2",
+                    parentId:'2',
+                },{
+                    id: '233',
+                    name: "bb_sub2_sub2",
+                    desc: "这是一个描述_sub2_sub2",
+                    parentId:'23',
+                },{
+                    id: '2333',
+                    name: "bb_sub2_sub2_sub2",
+                    desc: "这是一个描述_sub2_sub2_sub2",
+                    parentId:'233',
+                },{
+                    id: '24',
+                    name: "bb_sub3",
+                    desc: "这是一个描述_sub3",
+                    parentId:'2',
+                },
+            ]
+            $('#tree_table').bootstrapTable({
+                class: 'table table-hover table-bordered',
+                data: data,
+                pagination: false,
+                treeView: true,
+                treeId: "id",
+                treeField: "name",
+                columns: [{
+                    field: 'name',
+                    title: '名称',
+                },
+                {
+                    field: 'desc',
+                    title: '详情',
+                },
+                ]
+            });
+            $("#expandAllTree").on('click',function(){
+                $('#tree_table').bootstrapTable("expandAllTree")
+            })
+            $("#collapseAllTree").on('click',function(){
+                $('#tree_table').bootstrapTable("collapseAllTree")
+            })
+        });
+    </script>
+</body>
+
+</html>
