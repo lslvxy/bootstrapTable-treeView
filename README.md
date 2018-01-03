@@ -1,7 +1,7 @@
 TreeView for [bootstrapTable](https://github.com/wenzhixin/bootstrap-table)
 
 
-![demo](https://raw.githubusercontent.com/lslvxy/bootstrapTable-treeView/master/assets/demo.gif)
+![demo](https://raw.githubusercontent.com/lslvxy/bootstrapTable-treeView/master/assets/demo.png)
 
 ## DEMO
 
