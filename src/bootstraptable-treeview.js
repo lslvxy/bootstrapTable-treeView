@@ -126,8 +126,9 @@
                 return row.parentId == null;
             });
             var g=function(child){
+                var childLevel=that.options.treeRootLevel+levelStep;
                 $.each(child, function (i, n) {
-                    n.level=that.options.treeRootLevel+levelStep;
+                    n.level=childLevel;
                     if (that.options.treeCollapseAll) {
                         n.hidden = true;
                     }
