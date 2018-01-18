@@ -1,0 +1,74 @@
+
+{
+    "total":3,
+    "rows":
+    [
+        {
+            "id": "1",
+            "name": "aa",
+            "desc": "这是一个描述",
+            "parentId": null
+        },
+        {
+            "id": "11",
+            "name": "aa_sub1",
+            "desc": "这是一个描述_sub1",
+            "parentId": "1"
+        },
+        {
+            "id": "111",
+            "name": "aa_sub1_sub2",
+            "desc": "这是一个描述_sub1_sub2",
+            "parentId": "11"
+        },
+        {
+            "id": "2",
+            "name": "bb",
+            "desc": "这是一个描述",
+            "parentId": null
+        },
+        {
+            "id": "22",
+            "name": "bb_sub1",
+            "desc": "这是一个描述_sub1",
+            "parentId": "2"
+        },
+        {
+            "id": "23",
+            "name": "bb_sub2",
+            "desc": "这是一个描述_sub2",
+            "parentId": "2"
+        },
+        {
+            "id": "233",
+            "name": "bb_sub2_sub2",
+            "desc": "这是一个描述_sub2_sub2",
+            "parentId": "23"
+        },
+        {
+            "id": "2333",
+            "name": "bb_sub2_sub2_sub2",
+            "desc": "这是一个描述_sub2_sub2_sub2",
+            "parentId": "233"
+        },
+        {
+            "id": "23333",
+            "name": "bb_sub2_sub2_sub23",
+            "desc": "这是一个描述_sub2_sub2_sub2",
+            "parentId": "233"
+        },
+        {
+            "id": "233333",
+            "name": "bb_sub2_sub2_sub233",
+            "desc": "这是一个描述_sub2_sub2_sub2",
+            "parentId": "233"
+        },
+        {
+            "id": "24",
+            "name": "bb_sub3",
+            "desc": "这是一个描述_sub3",
+            "parentId": "2"
+        }
+    ]
+}
+

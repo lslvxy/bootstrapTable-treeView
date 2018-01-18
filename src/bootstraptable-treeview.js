@@ -1,3 +1,7 @@
+/**
+ * created by lise 
+ * @date 2018-01-18
+ */
 (function ($) {
     'use strict';
 
