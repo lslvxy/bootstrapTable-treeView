@@ -165,7 +165,9 @@
     //重写bootstrapTable的initPagination方法
     BootstrapTable.prototype.initPagination = function () {
         //理论情况下，treegrid是不支持分页的，所以默认分页参数为false
-        this.options.pagination = false;
+        if(this.options.treeView){
+            this.options.pagination = false;
+        }
          //调用“父类”的“虚方法”
         _initPagination.apply(this, Array.prototype.slice.apply(arguments));
     };
@@ -321,7 +323,8 @@
                     sprintf(' type="%s"', type) +
                     sprintf(' value="%s"', item[that.options.idField]) +
                     sprintf(' checked="%s"', value === true ||
-                        (value_ || value && value.checked) ? 'checked' : undefined) +
+                        (value_ || value && value.checked)  ||
+                        (item && item.checked)? 'checked' : undefined) +
                     sprintf(' disabled="%s"', !column.checkboxEnabled ||
                         (value && value.disabled) ? 'disabled' : undefined) +
                     ' />',
@@ -482,7 +485,6 @@
                 index = $tr.data('index'),
                 row = data[index];
             var icon = $(this);
-            debugger
             if(icon.hasClass(that.options.expandIcon)){
                 //展开状态
                 icon.removeClass(that.options.expandIcon).addClass(that.options.collapseIcon);
@@ -534,7 +536,17 @@
                 });
                 that.$selectItem.filter(':checked').not(this).prop('checked', false);
             }
-
+            var child = getAllChild(row, that.options.data, that.options.treeId);
+            $.each(child, function (i, c) {
+                $.each(that.data, function (index, item) {
+                    if (item[that.options.treeId] == c[that.options.treeId]) {
+                        item.checked = checked ? true : false;
+                        return;
+                    }
+                });
+            });
+            that.options.data = that.data;
+            that.initBody(true);
             that.updateSelected();
             that.trigger(checked ? 'check' : 'uncheck', row, $this);
         });

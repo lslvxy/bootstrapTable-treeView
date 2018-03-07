@@ -5,7 +5,7 @@ TreeView for [bootstrapTable](https://github.com/wenzhixin/bootstrap-table)
 
 ## DEMO
 
-[http://seitter.site/bootstrapTable-treeView/](http://seitter.site/bootstrapTable-treeView/)
+[http://imsense.site/bootstrapTable-treeView/](http://imsense.site/bootstrapTable-treeView/)
 
 ## NOTICE
 

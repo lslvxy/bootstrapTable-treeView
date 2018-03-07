@@ -86,15 +86,17 @@
             ]
             $('#tree_table').bootstrapTable({
                 class: 'table table-hover table-bordered',
-                url:'data.json',
-                contentType: 'application/x-www-form-urlencoded; charset=utf-8',
-                // data: data,
+                // url:'data.json',
+                // contentType: 'application/x-www-form-urlencoded; charset=utf-8',
+                data: data,
                 sidePagination: 'server',
                 pagination: false,
                 treeView: true,
                 treeId: "id",
                 treeField: "name",
                 columns: [{
+                    checkbox:true
+                },{
                     field: 'name',
                     title: '名称',
                 },
