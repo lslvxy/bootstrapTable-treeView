@@ -94,6 +94,11 @@
                 treeView: true,
                 treeId: "id",
                 treeField: "name",
+                rowAttributes: function (row, index) {
+                    return {
+                        xx:index
+                    };
+                },
                 columns: [{
                     checkbox:true
                 },{
