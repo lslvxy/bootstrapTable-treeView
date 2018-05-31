@@ -553,6 +553,7 @@
                 $.each(that.data, function (index, item) {
                     if (item[that.options.treeId] == c[that.options.treeId]) {
                         item.checked = checked ? true : false;
+                        that.trigger(checked ? 'check' : 'uncheck', item, this);
                         return;
                     }
                 });

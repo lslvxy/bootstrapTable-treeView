@@ -86,9 +86,9 @@
             ]
             $('#tree_table').bootstrapTable({
                 class: 'table table-hover table-bordered',
-                // url:'data.json',
-                // contentType: 'application/x-www-form-urlencoded; charset=utf-8',
-                data: data,
+                url:'data.json',
+                contentType: 'application/x-www-form-urlencoded; charset=utf-8',
+                // data: data,
                 sidePagination: 'server',
                 pagination: false,
                 treeView: true,
@@ -99,6 +99,12 @@
                         xx:index
                     };
                 },
+                queryParams : function(params) {
+					var param = {
+						roleId : 'xx'
+					};
+					return param;
+				},
                 columns: [{
                     checkbox:true
                 },{
