@@ -1,3 +1,11 @@
+
+Please Use [https://github.com/wenzhixin/bootstrap-table/tree/master/src/extensions/treegrid](https://github.com/wenzhixin/bootstrap-table/tree/master/src/extensions/treegrid)
+-------------------------
+
+
+
+
+
 TreeView for [bootstrapTable](https://github.com/wenzhixin/bootstrap-table)
 
 
