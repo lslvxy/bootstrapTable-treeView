@@ -154,7 +154,8 @@
                     }
                     rows.push(n);
                     if(subChild!=null && subChild.length>0){
-                        levelStep++;
+                        //levelStep++;
+                        levelStep = childLevel + 1; // format as per the childLevel, better formatting of levels after 3rd or 4th levels
                         g(subChild);
                     }else{
                         levelStep=1;
